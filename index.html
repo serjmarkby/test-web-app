@@ -29,14 +29,14 @@
     tg.expand();
     let ord = document.getElementById("order")
 
-    ord.addEventListener("click", function () {
-        let user_id = document.getElementById("user_name").value;
+    ord.addEventListener("click", () => {
+        let user_name = document.getElementById("user_name").value;
         let file = document.getElementById("file").value;
         let buy_count = document.getElementById("buy_count").value;
         let course = document.getElementById("course").value;
 
         let data = {
-            user_id: user_id,
+            user_name: user_name,
             file: file;
             buy_count: buy_count;
             course: course
