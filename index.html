@@ -31,12 +31,13 @@
     tg.expand();
     let ord = document.getElementById("order")
 
-    data = {
-        tg: tg,
-        ord: ord
-    }
-    tg.sendData(JSON.stringify(data));
-    tg.close();
+    ord.addEventListener("click", () => {
+        var form = document.querySelector('form');
+        var data = new FormData(form);
+        var req = new XMLHttpRequest();
+        req.send(data);
+        tg.close();
+        });
 </script>
 </body>
 </html>
