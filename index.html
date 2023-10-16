@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <title>Тест</title>
 </head>
 <body>
@@ -23,20 +25,20 @@
         <button id="order" class="btn btn-primary">Отправить</button>
     </form>
 </div>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
     let tg = window.Telegram.WebApp;
     tg.expand();
     let ord = document.getElementById("order")
 
     ord.addEventListener("click", () => {
-        let user_name = document.getElementById("user_name").value;
+        let user_id = document.getElementById("user_name").value;
         let file = document.getElementById("file").value;
         let buy_count = document.getElementById("buy_count").value;
         let course = document.getElementById("course").value;
 
         let data = {
-            user_name: user_name,
+            user_id: user_id,
             file: file;
             buy_count: buy_count;
             course: course
