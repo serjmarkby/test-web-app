@@ -27,6 +27,10 @@
 	    let user_name = document.getElementById("user_name");
 	    tg.sendData(JSON.stringify({user_name: user_name}); 
         });
+	Telegram.WebApp.onEvent("mainButtonClicked", function() {	
+	    let user_name = document.getElementById("user_name");
+	    tg.sendData(JSON.stringify({user_name: user_name}); 
+        });
 </script>
 </body>
 </html>
