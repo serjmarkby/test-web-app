@@ -25,7 +25,7 @@
         let ord = document.getElementById("order");
     
         ord.addEventListener("click", function() {	
-	    tg.sendData(JSON.stringify("text")); 
+	    tg.sendData(JSON.stringify({tg: tg})); 
         });
 </script>
 </body>
