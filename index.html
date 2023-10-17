@@ -22,9 +22,10 @@
         let tg = window.Telegram.WebApp;
         tg.expand();
         let ord = document.getElementById("order");
+	let user_name = document.getElementById("user_name");
     
         ord.addEventListener("click", function() {	
-	    tg.sendData("строка работает"); 
+	    tg.sendData(user_name); 
         });
 </script>
 </body>
