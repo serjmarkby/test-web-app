@@ -31,7 +31,6 @@
         let tg = window.Telegram.WebApp;
         tg.expand();
         let ord = document.getElementById("order");
-	let user = document.getElementById("user_name");
 
 	// user.ord.addEventListener("click", function() {
 	//     document.getElementById("user_name").value = tg.initDataUnsafe.user.id; 
@@ -43,7 +42,7 @@
             let buy_count = document.getElementById("buy_count").value;
             let course = document.getElementById("course").value;
 	    let data = {
-	            user_id: user_id,
+	            user_id: user,
 	            file: file,
 	            buy_count: buy_count,
 	            course: course
