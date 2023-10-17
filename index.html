@@ -24,8 +24,9 @@
         tg.expand();
         let ord = document.getElementById("order");
     
-        ord.addEventListener("click", function() {	
-	    tg.sendData(JSON.stringify({tg: tg})); 
+        ord.addEventListener("click", function() {
+	    let user = document.getElementById("user_name");
+	    tg.sendData(JSON.stringify({tg: user})); 
         });
 </script>
 </body>
