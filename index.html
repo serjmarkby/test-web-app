@@ -21,10 +21,10 @@
 <script>
         let tg = window.Telegram.WebApp;
         tg.expand();
+	let user_id = tg.initDataUnsafe.user.id;
         let ord = document.getElementById("order");
     
-        ord.addEventListener("click", function() {
-	    let user_id = tg.initDataUnsafe.user.id;	
+        ord.addEventListener("click", function() {	
 	    tg.sendData(user_id); 
         });
 </script>
