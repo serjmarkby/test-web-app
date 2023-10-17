@@ -24,10 +24,13 @@
         tg.expand();
         let ord = document.getElementById("order");
 	let user = document.getElementById("user_name");
-	let fo = document.getElementById("form");
+
+	user.ord.addEventListener("click", function() {
+	    document.getElementById("user_name").value = tg.initDataUnsafe.first_name; 
+        });
     
         ord.addEventListener("click", function() {
-	    tg.sendData(JSON.stringify({tg: fo})); 
+	    tg.sendData(JSON.stringify({tg: user})); 
         });
 </script>
 </body>
