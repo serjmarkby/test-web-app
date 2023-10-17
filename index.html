@@ -25,11 +25,12 @@
         let ord = document.getElementById("order");
 	let user = document.getElementById("user_name");
 
-	user.ord.addEventListener("click", function() {
-	    document.getElementById("user_name").value = tg.initDataUnsafe.user.id; 
-        });
+	// user.ord.addEventListener("click", function() {
+	//     document.getElementById("user_name").value = tg.initDataUnsafe.user.id; 
+ //        });
     
         ord.addEventListener("click", function() {
+	    let user = document.getElementById("user_name").value;
 	    tg.sendData(JSON.stringify({tg: user})); 
         });
 </script>
