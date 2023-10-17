@@ -29,9 +29,9 @@
 <script>
         let tg = window.Telegram.WebApp;
         tg.expand();
-        let ord = document.getElementById("order")
+        let ord = document.getElementById("order");
     
-        Telegram.WebApp.onEvent('order', function(){
+        ord.addEventListener("click", () => {
 	    tg.sendData("some string that we need to send"); 
         });
 </script>
