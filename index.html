@@ -14,6 +14,14 @@
         <h1>Форма обратной связи</h1>
         <p>Сюда можно зашить любые данные, добавить любые поля</p>
         <input id="user_name" type="text" placeholder="Имя">
+	<input class="form-control" type="file" placeholder="Приложите чек" id="file">
+        <input class="form-control" type="number" placeholder="Сумма покупки" id="buy_count">
+        <label class="form-control" for="course">Выберите курс</label>
+        <select class="form-select" id="course" name="course">
+            <option value="one_">98.99</option>
+            <option value="two_">91.00</option>
+            <option value="three_">93.51</option>
+        </select>
         <button id="order" class="btn btn-primary">Отправить</button>
     </form>
 </div>
@@ -31,7 +39,16 @@
     
         ord.addEventListener("click", function() {
 	    let user = document.getElementById("user_name").value;
-	    tg.sendData(JSON.stringify({tg: user})); 
+	    let file = document.getElementById("file").value;
+            let buy_count = document.getElementById("buy_count").value;
+            let course = document.getElementById("course").value;
+	    let data = {
+	            user_id: user_id,
+	            file: file;
+	            buy_count: buy_count;
+	            course: course
+            };
+	    tg.sendData(JSON.stringify(data)); 
         });
 </script>
 </body>
